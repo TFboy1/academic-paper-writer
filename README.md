@@ -33,7 +33,7 @@ Anthropic 官方推出的 Agentic CLI 工具。
 
 ```bash
 # 克隆到您的 skills 目录
-git clone <your-repo-url> academic-paper-writer
+git clone https://github.com/TFboy1/academic-paper-writer academic-paper-writer
 ```
 
 ### 第二步：加载 Skill

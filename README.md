@@ -1,6 +1,9 @@
 # Academic Paper Writer Pro
 
-一个专业的 AI Agent Skill，用于辅助学术论文的研究、撰写与排版。本 Skill 强制执行结构化的工作流程，利用精准的 `.docx` 和 `.pdf` 处理能力，确保您的文稿严格符合各类学术格式要求（如 IEEE、APA、各类高校模板）。
+
+一个专业的 AI Agent Skill，用于辅助学术论文的研究、撰写与排版。本 Skill 强制执行结构化的工作流程，利用精准的 `.docx` 和 `.pdf` 处理能力，确保您的文稿严格符合各类学术格式要求（如 IEEE、ACM、Springer、NeurIPS、MLA、APA 及各类高校模板）。
+
+
 
 ## 1. 环境准备 (Prerequisites)
 
@@ -26,9 +29,21 @@ Anthropic 官方推出的 Agentic CLI 工具。
 
 ## 2. 安装说明 (Installation)
 
-请按照以下步骤将本 Skill 导入到您的 Agent 环境中：
+考虑到不同用户的使用环境，我们提供了 **一键自动化安装** 和 **手动配置** 两种方式。
 
-### 第一步：克隆仓库
+> **🔗 官方 Skill 主页**: [https://skills.sh/tfboy1/academic-paper-writer/academic-paper-writer-pro](https://skills.sh/tfboy1/academic-paper-writer/academic-paper-writer-pro)
+
+### 选项一：一键自动化安装 (推荐)
+如果您使用的是兼容的 Agentic 框架（如 Claude Code 或 OpenCode），只需在您的工作目录下运行以下一条命令，系统将自动拉取代码仓库并配置依赖，免去手动操作：
+
+```bash
+npx skills add https://github.com/tfboy1/academic-paper-writer --skill academic-paper-writer-pro
+```
+
+### 选项二：手动克隆与配置
+如果受限于网络或框架环境无法使用一键安装，请按以下步骤手动导入本 Skill：
+
+#### 1. 克隆仓库
 导航至您的 Agent 工作区或 Skills 目录，并克隆本仓库：
 
 ```bash
@@ -36,7 +51,7 @@ Anthropic 官方推出的 Agentic CLI 工具。
 git clone <your-repo-url> academic-paper-writer
 ```
 
-### 第二步：加载 Skill
+#### 2. 加载 Skill
 - **对于 OpenCode**: Agent 会自动检测配置路径下的 Skills。您可能需要重启会话，或显式要求 Agent "加载 academic-paper-writer skill"。
 - **对于 Claude Code**: 您可以通过在上下文窗口中提供此目录，或挂载该目录，指示 Claude 将其作为工具集使用。
 

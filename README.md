@@ -1,8 +1,32 @@
+<div align="center">
+
 # Academic Paper Writer Pro
 
+<img src="resources/banner.svg" alt="Academic Paper Writer Pro Banner" width="100%"/>
 
-一个专业的 AI Agent Skill，用于辅助学术论文的研究、撰写与排版。本 Skill 强制执行结构化的工作流程，利用精准的 `.docx` 和 `.pdf` 处理能力，确保您的文稿严格符合各类学术格式要求（如 IEEE、ACM、Springer、NeurIPS、MLA、APA 及各类高校模板）。
+<br/>
 
+[![Discord](https://img.shields.io/badge/Discord-Join%20Chat-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/DrqtEjk6)
+[![Skills.sh](https://img.shields.io/badge/Skills.sh-Install%20Skill-00C853?style=for-the-badge&logo=hackthebox&logoColor=white)](https://skills.sh/tfboy1/academic-paper-writer/academic-paper-writer-pro)
+[![爱发电](https://img.shields.io/badge/爱发电-Support%20Me-FF69B4?style=for-the-badge&logo=buy-me-a-coffee&logoColor=white)](https://www.ifdian.net/item/1a20ed042f0711f1865a52540025c377)
+[![License](https://img.shields.io/github/license/tfboy1/academic-paper-writer?style=for-the-badge&color=blue)](LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/tfboy1/academic-paper-writer?style=for-the-badge&logo=github&color=yellow)](https://github.com/tfboy1/academic-paper-writer/stargazers)
+
+<br/>
+
+[![简体中文](https://img.shields.io/badge/简体中文-当前语言-red?style=flat-square)](#)
+[![English](https://img.shields.io/badge/English-README-blue?style=flat-square)](README_EN.md)
+[![日本語](https://img.shields.io/badge/日本語-README-blue?style=flat-square)](README_JA.md)
+[![Français](https://img.shields.io/badge/Français-README-blue?style=flat-square)](README_FR.md)
+[![Deutsch](https://img.shields.io/badge/Deutsch-README-blue?style=flat-square)](README_DE.md)
+
+<br/>
+
+一个专业的 AI Agent Skill，用于辅助学术论文的研究、撰写与排版。<br/>
+本 Skill 强制执行结构化的工作流程，利用精准的 `.docx` 和 `.pdf` 处理能力，<br/>
+确保您的文稿严格符合各类学术格式要求（如 IEEE、ACM、Springer、NeurIPS、MLA、APA 及各类高校模板）。
+
+</div>
 
 
 ## 1. 环境准备 (Prerequisites)

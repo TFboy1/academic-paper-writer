@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="300" viewBox="0 0 900 300">
+  <defs>
+    <!-- 主背景渐变 -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f0c29"/>
+      <stop offset="50%" stop-color="#302b63"/>
+      <stop offset="100%" stop-color="#24243e"/>
+    </linearGradient>
+    <!-- 标题文字渐变 -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="50%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+    <!-- 发光滤镜 -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- 极细发光 -->
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="300" fill="url(#bg)" rx="12"/>
+
+  <!-- 装饰网格线 -->
+  <g opacity="0.04" stroke="#fff" stroke-width="0.5">
+    <line x1="0" y1="60" x2="900" y2="60"/>
+    <line x1="0" y1="120" x2="900" y2="120"/>
+    <line x1="0" y1="180" x2="900" y2="180"/>
+    <line x1="0" y1="240" x2="900" y2="240"/>
+    <line x1="150" y1="0" x2="150" y2="300"/>
+    <line x1="300" y1="0" x2="300" y2="300"/>
+    <line x1="450" y1="0" x2="450" y2="300"/>
+    <line x1="600" y1="0" x2="600" y2="300"/>
+    <line x1="750" y1="0" x2="750" y2="300"/>
+  </g>
+
+  <!-- 左上角装饰圆 -->
+  <circle cx="80" cy="60" r="90" fill="#60a5fa" opacity="0.05" filter="url(#softGlow)"/>
+  <!-- 右下角装饰圆 -->
+  <circle cx="820" cy="240" r="110" fill="#a78bfa" opacity="0.05" filter="url(#softGlow)"/>
+  <!-- 中间微光 -->
+  <circle cx="450" cy="130" r="160" fill="#f472b6" opacity="0.03" filter="url(#softGlow)"/>
+
+  <!-- 浮动公式符号 -->
+  <g opacity="0.12" fill="#a78bfa" font-family="serif" font-style="italic">
+    <text x="60" y="85" font-size="28">∫</text>
+    <text x="140" y="55" font-size="22">∑</text>
+    <text x="780" y="70" font-size="26">∂</text>
+    <text x="830" y="120" font-size="20">∇</text>
+    <text x="100" y="250" font-size="24">∞</text>
+    <text x="750" y="260" font-size="28">π</text>
+    <text x="200" y="270" font-size="18">λ</text>
+    <text x="700" y="50" font-size="22">Σ</text>
+    <text x="50" y="170" font-size="20">α</text>
+    <text x="840" y="190" font-size="22">β</text>
+  </g>
+
+  <!-- 文档图标 -->
+  <g transform="translate(450, 100)" opacity="0.9">
+    <!-- 纸张 -->
+    <rect x="-22" y="-35" width="44" height="56" rx="3" fill="none" stroke="url(#titleGrad)" stroke-width="1.5" opacity="0.6"/>
+    <!-- 折角 -->
+    <path d="M12,-35 L22,-35 L22,-25 Z" fill="none" stroke="url(#titleGrad)" stroke-width="1" opacity="0.4"/>
+    <!-- 内容线 -->
+    <line x1="-14" y1="-22" x2="14" y2="-22" stroke="#60a5fa" stroke-width="1" opacity="0.4"/>
+    <line x1="-14" y1="-14" x2="10" y2="-14" stroke="#a78bfa" stroke-width="1" opacity="0.35"/>
+    <line x1="-14" y1="-6" x2="14" y2="-6" stroke="#60a5fa" stroke-width="1" opacity="0.3"/>
+    <line x1="-14" y1="2" x2="8" y2="2" stroke="#a78bfa" stroke-width="1" opacity="0.25"/>
+    <line x1="-14" y1="10" x2="12" y2="10" stroke="#60a5fa" stroke-width="1" opacity="0.2"/>
+  </g>
+
+  <!-- 主标题 -->
+  <text x="450" y="160" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="46" fill="url(#titleGrad)" filter="url(#glow)">
+    Academic Paper Writer
+  </text>
+  <!-- Pro 徽标 -->
+  <rect x="735" y="138" width="52" height="26" rx="6" fill="#a78bfa" opacity="0.85"/>
+  <text x="761" y="156" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-weight="700" font-size="14" fill="#fff">
+    PRO
+  </text>
+
+  <!-- 副标题 -->
+  <text x="450" y="195" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-weight="400" font-size="16" fill="#94a3b8" letter-spacing="2">
+    AI-Powered Academic Formatting &amp; Typesetting Agent
+  </text>
+
+  <!-- 底部标签 -->
+  <g transform="translate(450, 240)" text-anchor="middle" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="12">
+    <!-- IEEE -->
+    <rect x="-210" y="-12" width="56" height="24" rx="12" fill="#1e3a5f" opacity="0.7"/>
+    <text x="-182" y="4" fill="#60a5fa" font-weight="500">IEEE</text>
+    <!-- ACM -->
+    <rect x="-140" y="-12" width="52" height="24" rx="12" fill="#1e3a5f" opacity="0.7"/>
+    <text x="-114" y="4" fill="#60a5fa" font-weight="500">ACM</text>
+    <!-- Springer -->
+    <rect x="-74" y="-12" width="72" height="24" rx="12" fill="#1e3a5f" opacity="0.7"/>
+    <text x="-38" y="4" fill="#60a5fa" font-weight="500">Springer</text>
+    <!-- NeurIPS -->
+    <rect x="12" y="-12" width="72" height="24" rx="12" fill="#1e3a5f" opacity="0.7"/>
+    <text x="48" y="4" fill="#60a5fa" font-weight="500">NeurIPS</text>
+    <!-- MLA -->
+    <rect x="98" y="-12" width="50" height="24" rx="12" fill="#1e3a5f" opacity="0.7"/>
+    <text x="123" y="4" fill="#60a5fa" font-weight="500">MLA</text>
+    <!-- APA -->
+    <rect x="162" y="-12" width="48" height="24" rx="12" fill="#1e3a5f" opacity="0.7"/>
+    <text x="186" y="4" fill="#60a5fa" font-weight="500">APA</text>
+  </g>
+</svg>

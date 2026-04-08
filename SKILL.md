@@ -33,8 +33,10 @@ description: 基于规范目录结构的学术论文排版助手。支持 PDF / 
 │   └── SKILL.md
 ├── pdf/                # PDF 操作 Skill
 │   └── SKILL.md
+├── content_generation/ # Pipeline D: 论文内容智能生成 Skill
+│   └── SKILL.md
 ├── SKILL.md            # 本文件（主入口路由 + Pipeline B/C + 排版规范库）
-└── <source>.*          # 用户提供的原始文件 (.pdf / .doc / .docx / .md)
+└── <source>.*          # 用户提供的原始文件 (.pdf / .doc / .docx / .md / 项目代码目录)
 ```
 
 ---
@@ -69,6 +71,7 @@ description: 基于规范目录结构的学术论文排版助手。支持 PDF / 
 | `.pdf` | **Pipeline A — OCR 管道** | 页 (page) | `ocr_kb/SKILL.md` |
 | `.doc` / `.docx` | **Pipeline B — 重排版管道** | 章节 (section) | `docx/SKILL.md` + 本文件 §3.2 |
 | `.md` | **Pipeline C — MD 直转管道** | 章节 (section) | `docx/SKILL.md` + 本文件 §3.3 |
+| 无 / 目录 | **Pipeline D — 内容生成管道** | 章节 (section) | `content_generation/SKILL.md` |
 
 ### 1.3 断点恢复检测
 
@@ -208,7 +211,18 @@ python docx/scripts/office/pack.py resources/unpacked/ outputs/<name>_final_<dat
 
 ---
 
-### 3.4 所有管道的通用规则
+### 3.4 Pipeline D — 内容生成管道（项目记录/代码输入）
+
+适用场景：用户没有完整的论文草稿，只有代码、实验数据或笔记，希望基于现有项目素材智能生成符合学术格式的论文初稿。
+
+详情操作规范见 `content_generation/SKILL.md`，主要流程概览：
+1. 分析用户提供的各种技术素材，提取并与用户确认论文整体大纲结构。
+2. 以逐节自回归生成的方式构建高质量学术文本，保存至 `resources/md/section_N.md`。
+3. 系统在生成完毕后，自动将其流转到 Pipeline C（MD 直转管道），复用其排版能力输出最终样式。
+
+---
+
+### 3.5 所有管道的通用规则
 
 以下规则不分管道，**强制执行**：
 

@@ -446,15 +446,21 @@ After running `comment.py` (see Step 2), add markers to document.xml. For replie
 
 ### Formulas (OMML)
 
-To insert a mathematical formula from LaTeX into a Word document natively (as `m:oMath`), use the provided converter script to generate the exact XML snippet, then paste it where needed.
+To insert a mathematical formula from LaTeX into a Word document natively (as `m:oMath`), use the provided converter script to generate the exact XML snippet, then paste it or inject it dynamically.
 
-**1. Generate OMML from LaTeX:**
+> [!IMPORTANT]
+> **Python `python-docx` Generation:** Never render equations (e.g. `$d_{model}$`) as raw italic text. You **must** utilize `latex_to_omml.py` to convert BOTH inline (`$...$`) and block (`$$...$$`) LaTeX formulas into native OMML and append them to the paragraph's `_p` element.
+>
+> - **Block Equations (`$$...$$`)**: `latex_to_omml` returns `<m:oMathPara>`. Parse and append it to the paragraph `para._p.append(parse_xml(omml_xml))`.
+> - **Inline Equations (`$...$`)**: `latex_to_omml` returns `<m:oMathPara>` wrapped around `<m:oMath>`. You must extract the inner `<m:oMath>` and append it: `para._p.append(parse_xml(omml_xml).find(qn('m:oMath')))` so it displays inline.
+
+**1. CLI Manual Generation:**
 ```bash
 python ocr_kb/scripts/latex_to_omml.py "\frac{-b \pm \sqrt{b^2 - 4ac}}{2a}"
 ```
 This outputs the exact `<m:oMathPara>` or `<m:oMath>` XML block.
 
-**2. Insert XML into document.xml:**
+**2. Manual XML Insertion:**
 Copy the printed XML and insert it as a sibling of `<w:p>` (for block equations) or inside a `<w:p>` (for inline equations).
 
 ```xml

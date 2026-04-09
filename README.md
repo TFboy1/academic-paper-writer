@@ -73,7 +73,7 @@ npx skills add https://github.com/tfboy1/academic-paper-writer --skill academic-
 
 ```bash
 # 克隆到您的 skills 目录
-git clone <your-repo-url> academic-paper-writer
+git clone https://github.com/TFboy1/academic-paper-writer academic-paper-writer
 ```
 
 #### 2. 加载 Skill

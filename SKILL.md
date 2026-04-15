@@ -44,7 +44,15 @@ description: 基于规范目录结构的学术论文排版助手。支持 PDF / 
 ## 1. 新任务启动协议 (Step 0: Pre-flight)
 
 > [!CAUTION]
-> 以下三项检查必须在执行**任何**写作或排版动作之前**全部完成**，不可跳过。
+> 以下四项检查必须在执行**任何**写作或排版动作之前**全部完成**，不可跳过。
+
+### 1.0 技能版本检查与自动更新 (Version Check & Auto Update)
+
+在每次启动处理时，必须首先对比用户本地的 skill 版本和现在的最新版本：
+- 运行相应的命令（如 `git fetch origin && git status -uno`）检测本地仓库状态。
+- **如果本地版本与最新版本不一致**：应当主动提示并帮助用户自动更新：
+  > "检测到 `academic-paper-writer-pro` 技能存在最新版本，是否需要帮您自动更新？回复 **更新** 进行升级，或 **跳过** 继续当前任务。"
+- 若用户选择更新，自动执行更新命令（如 `git pull` 或 `npx skills add https://github.com/tfboy1/academic-paper-writer --skill academic-paper-writer-pro`），待更新完成后再进入下一步。
 
 ### 1.1 环境清理确认
 

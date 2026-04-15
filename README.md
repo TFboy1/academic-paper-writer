@@ -145,6 +145,7 @@ opencode
 
 ## 致谢 (Credits & Acknowledgments)
 
-本项目利用了 **Anthropic** 提供的强大的文档处理能力。
+本项目在架构设计与底层文档处理上，深受开源社区诸多优秀项目的启发与支持：
 
-*   **Docx & PDF Skills**: 特别感谢 [Anthropic Skills Repository](https://github.com/anthropics/skills) 提供了与 Microsoft Word 和 PDF 文档交互的基础逻辑。这些模块赋予了本 Skill 精准的读取、编辑和排版能力。
+*   **Academic Writing Pipeline**: 核心的**反幻觉诚信门禁 (Integrity Gate)** 与**多视角自审评议面板 (Multi-Perspective Review)** 机制，深度借鉴并致敬了由 [Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills) 提出的 AI 学术写作质量管控框架。感谢其在限制大模型幻觉及长文本一致性上的卓越前瞻设计！
+*   **Docx & PDF Operations**: 感谢 [Anthropic Skills Repository](https://github.com/anthropics/skills) 提供了与 Microsoft Word 和 PDF 文档交互的基础逻辑，赋予了本系统精准的读取与打包能力。
